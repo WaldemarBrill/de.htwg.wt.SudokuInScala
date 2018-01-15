@@ -5,11 +5,11 @@ var spiel_vue;
 function createGamefield() {
 	let xStart = "nichts";
 	let yStart = "nichts";
-	let size = document.getElementById("Gamefield").getAttribute("size");
+	let size = $("#Gamefield").attr("size");
 	for (let y = 0; y < size; y++) {
 		let Zeile = document.createElement("tr");
 		Zeile.id = "Zeile" + y;
-		document.getElementById("Gamefield").appendChild(Zeile);
+		$("#Gamefield").append(Zeile);
 		for (let x = 0; x < size; x++) {
 			let Zelle = document.createElement("button");
 			Zelle.id = x+","+y;
@@ -36,7 +36,7 @@ function createGamefield() {
 					yStart = "nichts";
 				}
 			}, false);
-			document.getElementById("Zeile"+y).appendChild(Zelle);
+			$("#Zeile"+y).append(Zelle);
 		}
 	}
 }
@@ -45,13 +45,14 @@ function deleteGamefield() {
 	let xStart = "nichts";
 	let yStart = "nichts";
 	$("#Gamefield").empty();
+	status_vue.clear();
 }
 
 function fillGrid(s) {
 	let fieldArray = s.split(" ");
 	let x = 0;
 	let y = 0;
-	let size = document.getElementById("Gamefield").getAttribute("size");
+	let size = $("#Gamefield").attr("size");
 	if (size == 0) {return;}
 	for (let i = 0; i < size; i++) {
 		for (let j = 0; j < size; j++) {
@@ -70,7 +71,6 @@ function fillGrid(s) {
 		case "K":
 			let inhalt = document.createTextNode(entry);
 			let index = x + "," + y;
-			//document.getElementById(index).appendChild(inhalt);
 			let target = document.getElementById(index);
 			target.setAttribute("figure", entry);
 		case "_":
@@ -182,6 +182,12 @@ $( document ).ready(function() {
 		
 		data: {
 			status_list: [],
+		},
+		
+		methods: {
+			clear() {
+				this.status_list = [];
+			}
 		},
 	});
 	
