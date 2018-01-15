@@ -145,7 +145,7 @@ body {
 }
 
 .fieldbutton[figure="K"] {
-	background-image: url("king.webp");
+	background-image: url("king.png");
 	background-size: cover;
 	background-repeat: no-repeat;
 }
