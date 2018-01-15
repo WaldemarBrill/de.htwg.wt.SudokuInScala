@@ -1,0 +1,166 @@
+body {
+	background-image: url("background2.jpg");
+	background-size: cover;
+	background-repeat: repeat;
+	background-position: 50% 0px;
+}
+#linker {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	
+	border: 2px solid #000;
+	background-image: url("background1.jpg");
+	background-repeat: no-repeat;
+	background-position: 50%;
+}
+#linker th a {
+	text-decoration: none;
+	font-weight: bold;
+	display: block;
+	border: 1px solid #000;
+	background-color: rgba(0, 0, 0, 0.6);
+	padding: 10px;
+	color: white;
+	font-family: Arial;
+}
+#linker th a:hover {
+	display: block;
+	border: 1px solid #000;
+	background-color: gray;
+}
+
+
+#help {
+	color: white;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+#status_elemente {
+	float: left;
+	width: 85px;
+	border: 2px solid rgb(102, 34, 0);
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+#status_fenster {
+	padding: 0;
+	font-size: 10px;
+	color: white;
+}
+
+#spiel_elemente {
+	float: left;
+}
+
+#Gamefield {
+	margin-left: auto;
+	margin-right: auto;
+	border: 10px solid rgb(102, 34, 0);
+}
+
+#player_turn {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.6);
+	border: 2px solid rgb(102, 34, 0);
+}
+
+@media (min-width: 0px) {
+	#Gamefield[size="9"] .fieldbutton {
+		padding: 12px;
+		display: inline-block;
+		background-color: rgb(255, 204, 102);
+	}
+	#Gamefield[size="11"] .fieldbutton {
+		padding: 10px;
+		display: inline-block;
+		background-color: rgb(255, 204, 102);
+	}
+	#Gamefield[size="13"] .fieldbutton {
+		padding: 8px;
+		display: inline-block;
+		background-color: rgb(255, 204, 102);
+	}
+}
+@media (min-width: 430px) {
+	#Gamefield[size="9"] .fieldbutton {
+		padding: 15px;
+		display: inline-block;
+		background-color: rgb(255, 204, 102);
+	}
+	#Gamefield[size="11"] .fieldbutton {
+		padding: 10px;
+		display: inline-block;
+		background-color: rgb(255, 204, 102);
+	}
+	#Gamefield[size="13"] .fieldbutton {
+		padding: 10px;
+		display: inline-block;
+		background-color: rgb(255, 204, 102);
+	}
+}
+@media (min-width: 550px) {
+	#Gamefield[size="9"] .fieldbutton {
+		padding: 20px;
+		display: inline-block;
+		background-color: rgb(255, 204, 102);
+	}
+		#Gamefield[size="11"] .fieldbutton {
+		padding: 16px;
+		display: inline-block;
+		background-color: rgb(255, 204, 102);
+	}
+	#Gamefield[size="13"] .fieldbutton {
+		padding: 15px;
+		display: inline-block;
+		background-color: rgb(255, 204, 102);
+	}
+}
+@media (min-width: 800px) {
+	#Gamefield[size="9"] .fieldbutton {
+		padding: 25px;
+		display: inline-block;
+		background-color: rgb(255, 204, 102);
+	}
+		#Gamefield[size="11"] .fieldbutton {
+		padding: 25px;
+		display: inline-block;
+		background-color: rgb(255, 204, 102);
+	}
+	#Gamefield[size="13"] .fieldbutton {
+		padding: 22px;
+		display: inline-block;
+		background-color: rgb(255, 204, 102);
+	}
+}
+@media (min-width: 900px) {
+	#Gamefield[size="9"] .fieldbutton {
+		padding: 30px;
+		display: inline-block;
+		background-color: rgb(255, 204, 102);
+	}
+}
+
+.fieldbutton[figure="K"] {
+	background-image: url("king.webp");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.fieldbutton[figure="D"] {
+	background-image: url("def.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.fieldbutton[figure="A"] {
+	background-image: url("atk.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.fieldbutton[figure="X"] {
+	background-image: url("castle.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}

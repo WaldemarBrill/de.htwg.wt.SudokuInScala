@@ -1,0 +1,28 @@
+@import play.api.i18n.Messages
+@import play.api.mvc.RequestHeader
+@import play.twirl.api.Html
+@import org.webjars.play.WebJarsUtil
+@import controllers.AssetsFinder
+
+@()(implicit request: RequestHeader, messages: Messages, webJarsUtil: WebJarsUtil, assets: AssetsFinder)
+
+@head("Game Tablut"){
+	<div id="status_elemente">
+		<div class="btn-group">
+			<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Menu<span class="caret"></span></button>
+			<ul class="dropdown-menu">
+				<li><a role="button" data-toggle="modal" size="9">Neustart 9 x 9</a></li>
+				<li><a role="button" data-toggle="modal" size="11">Neustart 11 x 11</a></li>
+				<li><a role="button" data-toggle="modal" size="13">Neustart 13 x 13</a></li>
+			</ul>
+		</div>
+		<ul id="status_fenster">
+			<p>Bewegungs Nachricht</p>
+			<li v-for="status in status_list" v-text="status"></li>
+		</ul>
+	</div>
+	<div id="spiel_elemente">
+		<div id="player_turn">{{get_player_turn}}</div>
+    	<table id="Gamefield" size="0"></table>
+    </div>
+}

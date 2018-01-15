@@ -21,14 +21,10 @@ POST        /password/change                 controllers.ChangePasswordControlle
 GET         /account/email/:email            controllers.ActivateAccountController.send(email: String)
 GET         /account/activate/:token         controllers.ActivateAccountController.activate(token: java.util.UUID)
 
-# Map to our chess application
-GET         /chess                           controllers.ChessController.chess
-GET		    /new    			             controllers.ChessController.newChess
-GET         /printBoard                      controllers.ChessController.printBoard
-GET         /about                           controllers.ChessController.about
-GET         /websocket                       controllers.ChessController.socket
-GET         /:command                        controllers.ChessController.command(command:String)
-
+GET			/tablut							controllers.TablutController.game
+GET			/tablut/:command				controllers.TablutController.command(command:String)
+GET			/help							controllers.TablutController.help
+GET			/websocket						controllers.TablutController.socket
 # Map static resources from the /public folder to the /assets URL path
 GET         /assets/*file                    controllers.Assets.versioned(file)
 ->          /webjars                         webjars.Routes
